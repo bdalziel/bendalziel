@@ -15,9 +15,6 @@ div, section, figure {
   box-shadow: #999999 -2px 2px 9px;
   overflow: hidden;
 }
-.well blockquote {
-  border-left: 5px solid #CCC;
-}
 .well h3 a {
   color: #BFBFBF;
 }
