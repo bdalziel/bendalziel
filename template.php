@@ -5,7 +5,6 @@ function render_page ($title, $page_title, $page_type, $page_content) {
   $nav = render_nav($page_type);
 
   $page = <<<HTML
-
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"> 
 <html> 
 <head>
@@ -18,12 +17,14 @@ function render_page ($title, $page_title, $page_type, $page_content) {
   <link rel="shortcut icon" href="favicon.ico" />
   <link rel="icon" href="favicon.ico" />
 
-  <link rel="image_src" href="img/bdalziel.png" /> 
+  <link rel="image_src" href="img/bdalziel.jpg" /> 
 
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" media="screen" href="assets/css/main.css" />
   <link rel="stylesheet" type="text/css" media="screen" href="assets/css/nav.css" />
   <link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-1.2.0.min.css">
+
+
 
 <script type="text/javascript">
   var _gaq = _gaq || [];
