@@ -39,13 +39,19 @@ foreach ($posts as $post) {
 
   $url = "bendalziel.com/blog.php?post_id=$pid";
   $url = urlencode($url);
+  $comments = '';
+  if (!$singlePost) {
+    $comments = <<<HTML
+            <iframe src="http://www.facebook.com/plugins/comments.php?href={$url}&permalink=1" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:130px; height:16px;" allowTransparency="true"></iframe>
+HTML;
+  }
 
   $entriesMarkup .= <<<HTML
         <li class="well">
           <div class="{$post_classes}">
             {$postMarkup}
             <h5>Tags: <small>{$tagsMarkup}</small></h5>
-            <iframe src="http://www.facebook.com/plugins/comments.php?href={$url}&permalink=1" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:130px; height:16px;" allowTransparency="true"></iframe> 
+            {$comments}
           </div>
         </li>
 HTML;
