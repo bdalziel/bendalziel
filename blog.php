@@ -27,19 +27,29 @@ try {
 catch (Exception $e) {
 }
 
+$page_title = "Ben Dalziel's Blog. <small>From new to old.</small>";
+
 $entriesMarkup = '';
 foreach ($posts as $post) {
-  $postMarkup = $post->toHtml();
+  $postMarkup = (!$singlePost) ? $post->toHtml() : $post->bodyToHtml();
+
+  $tags = $post->getTags();
+  $tagsMarkup = implode(' | ' , $tags);
+
   $entriesMarkup .= <<<HTML
         <li class="well">
           <div class="{$post_classes}">
             {$postMarkup}
+            <h5>Tags: <small>{$tagsMarkup}</small></h5>
           </div>
         </li>
 HTML;
+  if ($singlePost) {
+    $page_title = $post->getTitle() . ". <small><a href=\"blog.php\">Ben Dalziel's Blog</a></small>";
+    break;
+  }
 }
 
-$page_title = "Ben Dalziel's Blog. <small>From new to old.</small>";
 $page_content = <<<HTML
   <section>
     <div class="page-header">
@@ -97,6 +107,13 @@ HTML;
 HTML;
 }
 
-print render_page($page_title, 'Ben Dalziel\'s Blog', 'blog', $page_content . $paginationMarkup);
+$comments = '';
+if ($singlePost) {
+  $comments = <<<HTML
+<div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:comments href="bendalziel.com/blog.php?post_id={$getPostId}" num_posts="5" width="940"></fb:comments>
+HTML;
+}
+
+print render_page($page_title, strip_tags($page_title), 'blog', $page_content . $paginationMarkup . $comments);
 
 ?>
