@@ -27,7 +27,7 @@ HTML;
   }
 
   public function renderComments () {
-    $url = urlencode($this->getPostUrl());
+    $url = $this->getPostUrl();
 
     if ($this->isSinglePost) {
       $comments = <<<HTML
@@ -35,6 +35,7 @@ HTML;
 HTML;
     }
     else {
+      $url = urlencode($url);
       $comments = <<<HTML
 <iframe src="http://www.facebook.com/plugins/comments.php?href={$url}&permalink=1" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:130px; height:16px;" allowTransparency="true"></iframe>
 HTML;
