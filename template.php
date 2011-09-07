@@ -18,7 +18,7 @@ function render_page ($title, $page_title, $page_type, $page_content) {
   <link rel="shortcut icon" href="favicon.ico" />
   <link rel="icon" href="favicon.ico" />
 
-  <link rel="image_src" href="img/bdalziel.jpg" /> 
+  <link rel="image_src" href="assets/img/bdalziel.jpg" /> 
 
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" media="screen" href="assets/css/main.css" />
