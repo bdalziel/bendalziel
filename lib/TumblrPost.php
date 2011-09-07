@@ -53,7 +53,7 @@ class TumblrPost {
     $url   = '?post_id=' . $this->getId();
     $body  = $this->getBody();
     return <<<HTML
-<h{$h}>{$title}. <small><a href="{$url}">{$date}</a></small></h{$h}>
+<h{$h}>{$title}. <small><a href="{$url}">{$date} &rarr;</a></small></h{$h}>
 {$body}
 HTML;
   }

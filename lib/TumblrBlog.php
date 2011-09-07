@@ -46,7 +46,7 @@ class TumblrBlog {
 
   protected function parsePosts ($data) {
     $posts = array();
-    if (array_key_exists('posts', $data)) {
+    if (is_array($data) && array_key_exists('posts', $data)) {
       $data = $data['posts'];
       foreach ($data as $post) {
 	$post = $this->parsePost($post);

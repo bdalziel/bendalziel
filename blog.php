@@ -12,7 +12,7 @@ if (!$currentPage) {
 $singlePost = false;
 if ($getPostId && is_numeric($getPostId)) {
   $singlePost = true;
-  $getPostId = (int) $getPostId;
+  $getPostId = strval($getPostId);
 }
 
 try {
@@ -31,21 +31,26 @@ $page_title = "Ben Dalziel's Blog. <small>From new to old.</small>";
 
 $entriesMarkup = '';
 foreach ($posts as $post) {
+  $pid = $post->getId();
   $postMarkup = (!$singlePost) ? $post->toHtml() : $post->bodyToHtml();
 
   $tags = $post->getTags();
   $tagsMarkup = implode(' | ' , $tags);
+
+  $url = "bendalziel.com/blog.php?post_id=$pid";
+  $url = urlencode($url);
 
   $entriesMarkup .= <<<HTML
         <li class="well">
           <div class="{$post_classes}">
             {$postMarkup}
             <h5>Tags: <small>{$tagsMarkup}</small></h5>
+            <iframe src="http://www.facebook.com/plugins/comments.php?href={$url}&permalink=1" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:130px; height:16px;" allowTransparency="true"></iframe> 
           </div>
         </li>
 HTML;
   if ($singlePost) {
-    $page_title = $post->getTitle() . ". <small><a href=\"blog.php\">Ben Dalziel's Blog</a></small>";
+    $page_title = $post->getTitle() . ". <small><a href=\"blog.php\">Ben Dalziel's Blog &rarr;</a></small>";
     break;
   }
 }

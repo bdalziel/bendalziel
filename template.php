@@ -13,6 +13,7 @@ function render_page ($title, $page_title, $page_type, $page_content) {
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="description" content="The virtual home of Ben Dalziel">
   <meta name="keywords" content="Ben Dalziel, Benjamin Dalziel, Benjamin John Dalziel, Sly Trunk, Yahoo!, San Francisco, Yahoo! Sports, Resume, visual resume, CV, Curriculum vitae, Profile">
+  <meta property="fb:admins" content="bdalziel"/>
 
   <link rel="shortcut icon" href="favicon.ico" />
   <link rel="icon" href="favicon.ico" />
