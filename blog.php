@@ -39,7 +39,7 @@ foreach ($posts as $post) {
 HTML;
 }
 
-$page_title = "Ben Dalziel's Blog";
+$page_title = "Ben Dalziel's Blog. <small>From new to old.</small>";
 $page_content = <<<HTML
   <section>
     <div class="page-header">
@@ -54,8 +54,8 @@ $page_content = <<<HTML
 HTML;
 
 $paginationMarkup = '';
-if (!$singlePost) {
-  $pageCount = $tBlog->getPageCount();
+$pageCount = $tBlog->getPageCount();
+if (!$singlePost && $pageCount > 1) {
   $pageTabs = '';
   for ($i = 1; $i <= $pageCount; $i++) {
     $tabUrl = '?page=' . $i;
