@@ -2,7 +2,7 @@
 
 require('template.php');
 
-$title = "Home. <small>Welcome</small>";
+$title = "Home. <small>Welcome.</small>";
 
 $page_content = <<<HTML
 

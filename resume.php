@@ -22,7 +22,7 @@ $page_content = <<<HTML
 
   <section>
 
-    <h1>The Story So Far<small>...</small></h1>
+    <h1>The Story So Far.</h1>
 
     <div class="row">
       <div class="span-one-third columns">
@@ -39,13 +39,13 @@ $page_content = <<<HTML
       <div class="span-one-third columns">
         <h2>Chapter 3. <small>Professional.</small></h2>
         <p>From the Olympics and World Cup to Major League Baseball and the NFL, I wrote code that brought the magic of sports to users of the most visited sports site in the world.</p>
-        <p>A new chapter is beginning as I transition to front end of web development.</p>
+        <p>A new chapter is beginning as I transition to front end web development.</p>
       </div>
     </div>
 
     <div class="row">
       <div class="span-one-third columns">
-        <div class="well">Java | Maple | Eclipse | AspectJ | AJDT</div>
+        <div class="well">Java | Maple | AspectJ | AJDT | Eclipse</div>
       </div>
       <div class="span-one-third columns">
         <div class="well">Java | JSP | R | MySQL | XML | NetBeans</div>
