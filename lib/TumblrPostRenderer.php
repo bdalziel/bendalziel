@@ -15,7 +15,7 @@ class TumblrPostRenderer {
     $tags = $this->renderTags();
     $comments = $this->renderComments();
     $postMarkup = <<<HTML
-        <li class="well">
+        <li class="well post">
           <div>
             {$postMarkup}
             {$tags}

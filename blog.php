@@ -26,7 +26,7 @@ $page_content = <<<HTML
       <h1>{$pageTitle}</h1>
     </div>
     <div id="blog-container">
-      <ul>
+      <ul class="posts">
         {$postsMarkup}
       </ul>
     </div>

@@ -55,7 +55,6 @@ div.title {
   -moz-transform: rotatex(90deg) translatez(50px) translatey(-50px);
   -webkit-transform: rotatex(90deg) translatez(50px) translatey(-50px);
 }
-/* Each nav item is a 'box' */
 .box1 {
   left: 0;
 }

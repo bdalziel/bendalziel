@@ -15,9 +15,6 @@ div, section, figure {
   box-shadow: #999999 -2px 2px 9px;
   overflow: hidden;
 }
-.well h3 a {
-  color: #BFBFBF;
-}
 .frame {
   border: 5px solid #FFF;
   float: left;
@@ -62,9 +59,15 @@ div, section, figure {
 #footer li.first {
   border-left: 0;
 }
-li.well {
-  color: #000;
+#blog-container .posts {
+  padding: 0;
+  margin: 0;
   list-style: none;
 }
-li.well li {
+#blog-container {
+  color: #000;
+}
+#blog-container li,
+#blog-container .post {
+  color: #000;
 }
