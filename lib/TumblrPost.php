@@ -47,13 +47,19 @@ class TumblrPost {
     return $this->post['tags'];
   }
 
+  public function getUrl () {
+      return '?post_id=' . $this->getId();
+  }
+
   public function toHtml ($h = 3) {
     $title = $this->getTitle();
     $date  = $this->getFormattedDate();
     $url   = '?post_id=' . $this->getId();
     $body  = $this->getBody();
+
+    //<h{$h}>{$title}. <small><a href="{$url}">{$date} &rarr;</a></small></h{$h}>
+
     return <<<HTML
-<h{$h}>{$title}. <small><a href="{$url}">{$date} &rarr;</a></small></h{$h}>
 {$body}
 HTML;
   }
@@ -63,8 +69,8 @@ HTML;
     $date  = $this->getFormattedDate();
     $url   = '?post_id=' . $this->getId();
     $body  = $this->getBody();
+    //<h{$h}><small>{$date}</small></h{$h}>
     return <<<HTML
-<h{$h}><small>{$date}</small></h{$h}>
 {$body}
 HTML;
   }

@@ -32,6 +32,45 @@ class TumblrBlogRenderer {
     return $postsMarkup;
   }
 
+  public function renderPostsList ($activePostId) {
+      $postsListMarkup = '';
+      $posts = $this->getPosts();
+      foreach ($posts as $post) {
+          $postClasses = array();
+          $postTitle = $post->getTitle();
+          $postSubTitle = $post->getFormattedDate();
+
+          $postSub = '';
+          if ($activePostId == $post->getId()) {
+              $postClasses[] = 'active';
+              $postSub .= <<<HTML
+<br/><small>{$postSubTitle}.</small>
+HTML;
+          }
+          $postClasses = implode(' ', $postClasses);
+
+          $postMarkup = <<<HTML
+                      <h5>{$postTitle}.{$postSub}</h5>
+HTML;
+
+          if ($activePostId != $post->getId()) {
+              $postUrl = $post->getUrl();
+              $postMarkup = '<a href="' . $postUrl . '">' . $postMarkup . '</a>';
+          }
+
+          $postsListMarkup .= <<<HTML
+                <li class="{$postClasses}">
+                  {$postMarkup}
+                </li>
+HTML;
+      }
+      return $postsListMarkup;
+  }
+
+  public function isSinglePost () {
+      return $this->isSinglePost;
+  }
+
   public function getPageTitle () {
     $page_title = $this->blog->getBlogName();
     if ($this->isSinglePost) {

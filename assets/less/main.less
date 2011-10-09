@@ -90,12 +90,62 @@ div, section, figure {
   border-left: 0;
 }
 
-#blog-container ul {
+#blog-container .posts {
   padding: 0;
   margin: 0;  
+  list-style: none;
+}
+
+#blog-container .postsList,
+#blog-container .postCard {
+  padding: 0;
+  margin: 0;  
+  list-style: none;
+  li {
+    border-top: 2px solid @scheme-dark;
+    border-right: 1px dotted @scheme-dark;
+
+    h4,
+    h5 {
+      padding: 5px 10px;
+      margin-top: -2px;
+    }
+    &:hover {
+      background-color: @scheme-primary;
+    }
+    a:hover {
+      text-decoration: none;
+      h4,
+      h5 {
+        color: #FFF;
+      }
+    }
+    &.active {
+      &:hover {
+        background-color: #FFF;
+      }
+      border-left: 2px solid @scheme-dark;
+      border-right: none;
+    }
+  }
+}
+
+#blog-container .postCard {
+  li {
+    border-right: none;
+  }
+}
+
+#blog-container .postsList {
+  padding-top: 60px;
 }
 
 #blog-container ul .post {
   color: #000;
   list-style:none;
+  padding-top: 60px;
+}
+
+.tags {
+      margin-bottom: 1em;
 }

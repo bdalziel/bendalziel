@@ -15,6 +15,12 @@ div, section, figure {
   box-shadow: #999999 -2px 2px 9px;
   overflow: hidden;
 }
+.well blockquote {
+  border-left: 5px solid #CCC;
+}
+.well h3 a {
+  color: #BFBFBF;
+}
 .frame {
   border: 5px solid #FFF;
   float: left;
@@ -64,10 +70,52 @@ div, section, figure {
   margin: 0;
   list-style: none;
 }
-#blog-container {
-  color: #000;
+#blog-container .postsList, #blog-container .postCard {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
-#blog-container li,
-#blog-container .post {
+#blog-container .postsList li, #blog-container .postCard li {
+  border-top: 2px solid #218359;
+  border-right: 1px dotted #218359;
+}
+#blog-container .postsList li h4,
+#blog-container .postCard li h4,
+#blog-container .postsList li h5,
+#blog-container .postCard li h5 {
+  padding: 5px 10px;
+  margin-top: -2px;
+}
+#blog-container .postsList li:hover, #blog-container .postCard li:hover {
+  background-color: #00af64;
+}
+#blog-container .postsList li a:hover, #blog-container .postCard li a:hover {
+  text-decoration: none;
+}
+#blog-container .postsList li a:hover h4,
+#blog-container .postCard li a:hover h4,
+#blog-container .postsList li a:hover h5,
+#blog-container .postCard li a:hover h5 {
+  color: #FFF;
+}
+#blog-container .postsList li.active, #blog-container .postCard li.active {
+  border-left: 2px solid #218359;
+  border-right: none;
+}
+#blog-container .postsList li.active:hover, #blog-container .postCard li.active:hover {
+  background-color: #FFF;
+}
+#blog-container .postCard li {
+  border-right: none;
+}
+#blog-container .postsList {
+  padding-top: 60px;
+}
+#blog-container ul .post {
   color: #000;
+  list-style: none;
+  padding-top: 60px;
+}
+.tags {
+  margin-bottom: 1em;
 }

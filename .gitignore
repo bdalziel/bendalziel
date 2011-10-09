@@ -30,3 +30,13 @@ dots/dots2.php
 dots/dots.php
 
 runkeeper/api/
+
+lib/TumblrPost.php~
+
+lib/TumblrBlogRenderer.php~
+
+blog.php~
+
+assets/less/main.less~
+
+assets/less/.DS_Store

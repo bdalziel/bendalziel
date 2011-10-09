@@ -14,8 +14,35 @@ class TumblrPostRenderer {
     $postMarkup = (!$this->isSinglePost) ? $this->post->toHtml() : $this->post->bodyToHtml();
     $tags = $this->renderTags();
     $comments = $this->renderComments();
-    $postMarkup = <<<HTML
-        <li class="well post">
+
+    if (!$this->isSinglePost) {
+        $postTitle = $this->post->getTitle();
+        $postSubTitle = $this->post->getFormattedDate();
+        $postUrl = $this->post->getUrl();
+        $postMarkup = <<<HTML
+        <li class="post">
+            <div class="row">
+                <div class="span-one-third">
+                <ul class="postCard">
+                  <li>
+                    <a href="{$postUrl}">
+                        <h4>{$postTitle}.<br /><small>{$postSubTitle}.</small></h4>
+                    </a>
+                  </li>
+                </ul>
+                </div>
+                <div class="span-two-thirds">
+                    {$postMarkup}
+                    {$tags}
+                    {$comments}
+                </div>
+            </div>
+        </li>
+HTML;
+    }
+    else {
+        $postMarkup = <<<HTML
+        <li class="post">
           <div>
             {$postMarkup}
             {$tags}
@@ -23,6 +50,7 @@ class TumblrPostRenderer {
           </div>
         </li>
 HTML;
+    }
     return $postMarkup;
   }
 
@@ -31,7 +59,7 @@ HTML;
 
     if ($this->isSinglePost) {
       $comments = <<<HTML
-<div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:comments href="{$url}" num_posts="5" width="860"></fb:comments>
+<div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:comments href="{$url}" num_posts="5" width="620"></fb:comments>
 HTML;
     }
     else {
@@ -47,7 +75,7 @@ HTML;
     $tags = $this->post->getTags();
     $tagsMarkup = implode(' | ' , $tags);
     return <<<HTML
-<h5>Tags: <small>{$tagsMarkup}</small></h5>
+<h5 class="tags">Tags: <small>{$tagsMarkup}</small></h5>
 HTML;
   }
 
