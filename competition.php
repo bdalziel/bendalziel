@@ -70,7 +70,7 @@ $markup = <<<HTML
   </section>
 
   <section>
-    <div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:comments href="/competition.php" num_posts="5" width="940"></fb:comments>
+    <div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:comments href="bendalziel.com/competition.php" num_posts="5" width="940"></fb:comments>
 
   </section>
 HTML;
