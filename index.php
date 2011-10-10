@@ -2,7 +2,7 @@
 
 require('template.php');
 
-$title = "Home. <small>Welcome.</small>";
+$title = "Home. <small>A collection of my things, virtually.</small>";
 
 $page_content = <<<HTML
 
@@ -11,22 +11,28 @@ $page_content = <<<HTML
       <h1>{$title}</h1>
     </div>
 
-    <p>
-      A collection of my things, virtually:
-    </p>
-
     <div class="row">
+      <div class="span8 column"><h2 class="well"><a href="#running">Running 250 miles</a></h2></div>
       <div class="span8 column"><h2 class="well"><a href="#mammoth">Backpacking in Mammoth</a></h2></div>
+    </div>
+    <div class="row">
       <div class="span8 column"><h2 class="well"><a href="#oils">Oil Pastels</a></h2></div>
     </div>
 
-
-      <!--
-    <div class="alert-message warning">
-      <p><strong>Not in Chrome or Safari?</strong> Gosh, you're missing out on some sick 3D CSS!</p>
-    </div>
--->
   </section>
+
+  <!--
+    Running
+  -->
+  <a name="running"></a>
+  <section>
+    <div class="row">
+      <div class="span16 columns">
+        <h1>Running 250 miles. <small>September 23 - December 31, 2011.</small></h1>
+        <p>I have to run <em>250 miles</em> before the end of 2011. Cris is aiming to cycle <em>800 miles</em>. If only one of us achieves our goal, the loser has to pay for an all you can eat day for the winner and their family. There are also lesser sub goals to keep things interesting along the way. We're tracking our progress on Runkeeper, but you can check the more concise <a href="competition.php">status of the competition</a>.</p>
+      </div>
+    </div>
+
 
   <!--
     Mammoth
@@ -98,6 +104,6 @@ $page_content = <<<HTML
 
 HTML;
 
-print render_page($title, 'Ben Dalziel\'s Homepage', 'home', $page_content);
+print render_page($title, strip_tags($title), 'home', $page_content);
 
 ?>
