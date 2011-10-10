@@ -19,10 +19,11 @@ $bTotal = (float) getCompetitionTotalMiles($html, 9);
 $bCycMiles = (float) $bTotal*(float) ((float) 800/(float) 250);
 $bRemaining = 250-$bTotal;
 $bRemPace = $bRemaining/$remainingDays;
+$bPerc = (float) ($bTotal/ 2.5);
 
 $markup .= <<<HTML
 <tr>
-    <td><strong><a href="http://runkeeper.com/user/tigerkitten/activity/">Ben</a></strong> (running)</td><td>{$bTotal}</td><td>{$bCycMiles} (equivalent)</td><td>{$bRemaining}</td><td>{$bRemPace}</td>
+    <td><strong><a href="http://runkeeper.com/user/tigerkitten/activity/">Ben</a></strong> (running)</td><td>{$bTotal}</td><td>{$bPerc}</td><td>{$bRemaining}</td><td>{$bRemPace}</td>
 </tr>
 HTML;
 
@@ -32,10 +33,11 @@ $cTotal =  getCompetitionTotalMiles($html, 6);
 $cRunMiles = (float) $cTotal/(float) ((float) 800/(float) 250);
 $cRemaining = 800-$cTotal;
 $cRemPace = $cRemaining/$remainingDays;
+$cPerc = (float) ($cTotal/ 8);
 
 $markup .= <<<HTML
 <tr>
-    <td><strong><a href="http://runkeeper.com/user/DaddyRoundRound/activity/">Cris</a></strong> (cycling)</td><td>{$cRunMiles} (equivalent)</td><td>{$cTotal}</td><td>{$cRemaining}</td><td>{$cRemPace}</td>
+    <td><strong><a href="http://runkeeper.com/user/DaddyRoundRound/activity/">Cris</a></strong> (cycling)</td><td>{$cTotal}</td><td>{$cPerc}</td><td>{$cRemaining}</td><td>{$cRemPace}</td>
 </tr>
 HTML;
 
@@ -52,7 +54,7 @@ $markup = <<<HTML
 
     <table class="zebra-striped">
       <thead>
-        <tr><th>Competitor</th><th>Miles Run</th><th>Miles Cycled</th><th>Miles Remaining</th><th>Remaining Miles/day</th></tr>
+        <tr><th>Competitor</th><th>Miles Done</th><th>% Done</th><th>Miles Remaining</th><th>Remaining Miles/day</th></tr>
       </thead>
       <tbody>
         {$markup}
