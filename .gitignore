@@ -23,8 +23,6 @@ assets/css/bootstrap.min.css~
 
 lib/TumblrPostRenderer.php~
 
-runkeeper.php
-
 dots/dots2.php
 
 dots/dots.php
@@ -52,3 +50,5 @@ daddyroundround.php~
 daddyroundround.php
 
 competition.php~
+
+.gitignore~
