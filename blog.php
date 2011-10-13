@@ -61,6 +61,6 @@ else {
 HTML;
 }
 
-print render_page($pageTitle, strip_tags($pageTitle), 'blog', $page_content);
+print render_page($pageTitle, strip_tags($pageTitle), 'blog', $page_content, "blog.php" . ($blogRenderer->isSinglePost()) ? ("?post_id=" . $getPostId) : "");
 
 ?>

@@ -77,7 +77,7 @@ $markup = <<<HTML
   </section>
 HTML;
 
-print render_page($title, strip_tags($title), '', $markup);
+print render_page($title, strip_tags($title), '', $markup, "competition.php");
 
 
 ?>

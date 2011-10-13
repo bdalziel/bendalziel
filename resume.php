@@ -60,6 +60,6 @@ $page_content = <<<HTML
 
 HTML;
 
-print render_page($title, 'Ben Dalziel\'s R&#233;sum&#233;', 'resume', $page_content);
+print render_page($title, 'Ben Dalziel\'s R&#233;sum&#233;', 'resume', $page_content, "resume.php");
 
 ?>
