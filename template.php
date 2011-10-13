@@ -1,8 +1,11 @@
 <?php
 
-function render_page ($title, $page_title, $page_type, $page_content) {
+function render_page ($title, $page_title, $page_type, $page_content, $path = '') {
 
   $nav = render_nav($page_type);
+
+  $type = "website";
+  $url = "http://bendalziel.com/" . $path;
 
   $page = <<<HTML
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"> 
@@ -12,13 +15,20 @@ function render_page ($title, $page_title, $page_type, $page_content) {
   <title>{$page_title} | BenDalziel.com</title>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="description" content="The virtual home of Ben Dalziel">
-  <meta name="keywords" content="Ben Dalziel, Benjamin Dalziel, Benjamin John Dalziel, Sly Trunk, Yahoo!, San Francisco, Yahoo! Sports, Resume, visual resume, CV, Curriculum vitae, Profile">
-  <meta property="fb:admins" content="bdalziel"/>
+  <meta name="keywords" content="Ben Dalziel, Benjamin Dalziel, Benjamin John Dalziel, Sly Trunk, Yahoo!, San Francisco, Yahoo! Sports, Resume, visual resume, CV, Curriculum Vitae, Profile">
+  <meta property="fb:app_id" content="234718439919013"/>
+
+  <meta property="og:title" content="{$page_title}"/>
+  <meta property="og:type" content="{$type}"/>
+  <meta property="og:url" content="{$url}"/>
+
+  <meta property="og:image" content="http://bendalziel.com/assets/img/bdalziel.jpg"/>
+  <meta property="og:site_name" content="BenDalziel.com"/>
 
   <link rel="shortcut icon" href="favicon.ico" />
   <link rel="icon" href="favicon.ico" />
 
-  <link rel="image_src" href="assets/img/bdalziel.jpg" /> 
+  <link rel="image_src" href="assets/img/bdalziel.jpg" />
 
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" media="screen" href="assets/css/main.css" />
