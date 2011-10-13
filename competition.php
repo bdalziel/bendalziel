@@ -65,9 +65,10 @@ $markup = <<<HTML
       <div class="span-one-third offset-one-third">
         {$status}
       </div>
+      <div class="span-one-third">
+        <iframe src="//www.facebook.com/plugins/like.php?href=bendalziel.com%2Fcompetition.php&amp;send=false&amp;layout=button_count&amp;width=90&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=234718439919013" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:90px; height:21px;" allowTransparency="true"></iframe>
+      </div>
     </div>
-
-
 
   </section>
 
