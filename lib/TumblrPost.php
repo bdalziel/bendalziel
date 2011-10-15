@@ -39,8 +39,20 @@ class TumblrPost {
     return $this->title;
   }
 
-  public function getBody () {
-    return $this->body;
+  public function getBody ($abr = false) {
+      $body = $this->body;
+
+      if ($abr) {
+          $comps = explode("<!-- more -->", $body);
+          if (sizeof($comps) == 2) {
+              $body = $comps[0];
+              $url = $this->getUrl();
+              $body .= <<<HTML
+<p class="read-more"><a href="{$url}">Read More...</a></p>
+HTML;
+          }
+      }
+      return $body;
   }
 
   public function getTags () {
@@ -55,7 +67,7 @@ class TumblrPost {
     $title = $this->getTitle();
     $date  = $this->getFormattedDate();
     $url   = '?post_id=' . $this->getId();
-    $body  = $this->getBody();
+    $body  = $this->getBody(true);
 
     //<h{$h}>{$title}. <small><a href="{$url}">{$date} &rarr;</a></small></h{$h}>
 

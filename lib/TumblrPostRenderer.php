@@ -11,9 +11,17 @@ class TumblrPostRenderer {
   }
 
   public function render () {
-    $postMarkup = (!$this->isSinglePost) ? $this->post->toHtml() : $this->post->bodyToHtml();
-    $tags = $this->renderTags();
-    $comments = $this->renderComments();
+      $tags = '';
+      $comments = '';
+      if ($this->isSinglePost) {
+          $postMarkup = $this->post->bodyToHtml();
+          $tags = $this->renderTags();
+          $comments = $this->renderComments();
+      }
+      else {
+          $postMarkup = $this->post->toHtml();
+          $cardComments = $this->renderComments();
+      }
 
     if (!$this->isSinglePost) {
         $postTitle = $this->post->getTitle();
@@ -28,6 +36,7 @@ class TumblrPostRenderer {
                     <a href="{$postUrl}">
                         <h4>{$postTitle}.<br /><small>{$postSubTitle}.</small></h4>
                     </a>
+                    <p>{$cardComments}</p>
                   </li>
                 </ul>
                 </div>

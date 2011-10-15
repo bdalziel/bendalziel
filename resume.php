@@ -45,13 +45,13 @@ $page_content = <<<HTML
 
     <div class="row">
       <div class="span-one-third columns">
-        <div class="well">Java | Maple | AspectJ | AJDT | Eclipse</div>
+        <div class="well">Java | Maple | AspectJ | Eclipse</div>
       </div>
       <div class="span-one-third columns">
-        <div class="well">Java | JSP | R | MySQL | XML | NetBeans</div>
+        <div class="well">Java | R | MySQL | XML | NetBeans</div>
       </div>
       <div class="span-one-third columns">
-  <div class="well">PHP | MySQL | JS | CSS | HTML | Emacs</div>
+  <div class="well">PHP | MySQL | JS | CSS | Emacs</div>
       </div>
     </div>
 

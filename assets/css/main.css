@@ -35,6 +35,10 @@ div, section, figure {
   /* this is important */
 
 }
+section.photos p {
+  font-size: 13px;
+  line-height: 18px;
+}
 .photo, .oil-p {
   margin: -5px;
 }
@@ -76,6 +80,9 @@ div, section, figure {
   margin: 0;
   list-style: none;
 }
+#blog-container .posts .read-more {
+  text-align: right;
+}
 #blog-container .postsList, #blog-container .postCard {
   padding: 0;
   margin: 0;
@@ -113,6 +120,9 @@ div, section, figure {
 }
 #blog-container .postCard li {
   border-right: none;
+}
+#blog-container .postCard li p {
+  padding: 5px 10px;
 }
 #blog-container .postsList {
   padding-top: 60px;

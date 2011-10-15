@@ -34,7 +34,7 @@ function render_page ($title, $page_title, $page_type, $page_content, $path = ''
   <link rel="stylesheet" type="text/css" media="screen" href="assets/css/main.css" />
   <link rel="stylesheet" type="text/css" media="screen" href="assets/css/lessless.css" />
   <link rel="stylesheet" type="text/css" media="screen" href="assets/css/nav.css" />
-  <link rel="stylesheet" type="text/css" media="screen" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="assets/css/bootstrap.css" />
 
 <!--
   <link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-1.2.0.min.css">
