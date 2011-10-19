@@ -39,10 +39,11 @@ class TumblrBlog {
   public function getPostCount () {
     $url = $this->getBlogInfoUrl();
     $response = $this->executeQuery($url);
-    if (array_key_exists('blog', $response)) {
+    if ($response && array_key_exists('blog', $response)) {
       $data = $response['blog'];
       return (int) strval($data['posts']);
-    }    
+    }
+    return 0;
   }
 
   public function getUrl () {
