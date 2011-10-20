@@ -15,6 +15,20 @@
 }
 */
 
+html body {
+  background: url(../img/paper.jpg) repeat top left;
+}
+
+.container {
+  background-color: #FFF;
+  -moz-box-shadow: @shadow-color -2px px 9px;
+  -webkit-box-shadow: @shadow-color -2px 2px 9px;
+  box-shadow: @shadow-color -2px 2px 9px;
+  padding-bottom: 80px;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
 div, section, figure {
   padding: 0;
   margin: 0;
@@ -63,8 +77,10 @@ section.photos p {
 }
 
 #footer {
-  margin-top: 80px;
   background-color: @scheme-primary;
+  -moz-box-shadow: @shadow-color -2px px 9px;
+  -webkit-box-shadow: @shadow-color -2px 2px 9px;
+  box-shadow: @shadow-color -2px 2px 9px;
 }
 
 #footer_container {

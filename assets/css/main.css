@@ -4,6 +4,18 @@
   line-height: 1.5em;
 }
 */
+html body {
+  background: url(../img/paper.jpg) repeat top left;
+}
+.container {
+  background-color: #FFF;
+  -moz-box-shadow: #999999 -2px px 9px;
+  -webkit-box-shadow: #999999 -2px 2px 9px;
+  box-shadow: #999999 -2px 2px 9px;
+  padding-bottom: 80px;
+  padding-left: 18px;
+  padding-right: 18px;
+}
 div, section, figure {
   padding: 0;
   margin: 0;
@@ -43,8 +55,10 @@ section.photos p {
   margin: -5px;
 }
 #footer {
-  margin-top: 80px;
   background-color: #00af64;
+  -moz-box-shadow: #999999 -2px px 9px;
+  -webkit-box-shadow: #999999 -2px 2px 9px;
+  box-shadow: #999999 -2px 2px 9px;
 }
 #footer_container {
   background-color: #007241;

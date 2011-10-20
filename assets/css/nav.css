@@ -1,9 +1,17 @@
+#subNav {
+  background-color: #A65F00;
+  border: 1px solid #A65F00;
+  padding: 3px;
+}
 #nav {
   background-color: #00af64;
   height: 160px;
+  -moz-box-shadow: #999999 -2px px 9px;
+  -webkit-box-shadow: #999999 -2px 2px 9px;
+  box-shadow: #999999 -2px 2px 9px;
 }
 #nav_container {
-  height: 0;
+  height: 100px;
   margin: 0 auto;
   position: relative;
   width: 940px;
@@ -15,7 +23,6 @@ div.title {
   font: bold 32px "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin-left: 10px;
   position: absolute;
-  text-shadow: 1px -1px 3px #999999;
   top: 45px;
   -webkit-transform: translatez(-100px);
 }
@@ -30,7 +37,7 @@ div.title {
   width: 100px;
 }
 .container_bottom, .container_top {
-  background-color: #218359;
+  background-color: #FFF;
   height: 100px;
   width: 100%;
 }
@@ -68,9 +75,9 @@ div.title {
   display: block;
   opacity: 0.8;
   position: absolute;
-  -mo-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  -webkit-transition: all 0.5s ease-in-out;
+  -mo-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
 }
 .box figure span {
   color: #FFF;
