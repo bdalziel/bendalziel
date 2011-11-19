@@ -14,8 +14,9 @@ $today = time();
 $difference = $cdate - $today;
 $remainingDays = floor($difference/60/60/24);
 
-$html = getUserActivities("tigerkitten");
-$bTotal = (float) getCompetitionTotalMiles($html, 9);
+$username = "tigerkitten";
+$html = getUserActivities($username);
+$bTotal = (float) getCompetitionTotalMiles($username, $html, 9);
 $bCycMiles = (float) $bTotal*(float) ((float) 800/(float) 250);
 $bRemaining = 250-$bTotal;
 $bRemPace = $bRemaining/$remainingDays;
@@ -27,9 +28,9 @@ $markup .= <<<HTML
 </tr>
 HTML;
 
-
-$html = getUserActivities("DaddyRoundRound");
-$cTotal =  getCompetitionTotalMiles($html, 6);
+$username = "DaddyRoundRound";
+$html = getUserActivities($username);
+$cTotal =  getCompetitionTotalMiles($username, $html, 6);
 $cRunMiles = (float) $cTotal/(float) ((float) 800/(float) 250);
 $cRemaining = 800-$cTotal;
 $cRemPace = $cRemaining/$remainingDays;
