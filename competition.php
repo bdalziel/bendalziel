@@ -51,7 +51,17 @@ $markup = <<<HTML
       <h1>{$title}</h1>
     </div>
 
+
     <p>I have to run 250 miles before the end of 2011. Cris is aiming to cycle 800 miles. If only one of us achieves our goal, the loser has to pay for an all you can eat day for the winner and their family. There are also lesser sub goals to keep things interesting along the way.</p>
+
+    <h2 style="text-align: center;">It's over. I won, running 250 miles in 2 months.</h2>
+    <p style="text-align: center;">
+        <iframe width="420" height="315" src="http://www.youtube.com/embed/3GwjfUFyY6M" frameborder="0" allowfullscreen></iframe>
+    </p>
+
+    <h2>How it went down:<small>Blue=Me, Red=Cris</small></h2>
+
+    <img src="assets/img/compGraph.png" />
 
     <table class="zebra-striped">
       <thead>
