@@ -54,10 +54,28 @@ $markup = <<<HTML
 
     <p>I have to run 250 miles before the end of 2011. Cris is aiming to cycle 800 miles. If only one of us achieves our goal, the loser has to pay for an all you can eat day for the winner and their family. There are also lesser sub goals to keep things interesting along the way.</p>
 
-    <h2 style="text-align: center;">It's over. I won, running 250 miles in 2 months.</h2>
-    <p style="text-align: center;">
-        <iframe width="420" height="315" src="http://www.youtube.com/embed/3GwjfUFyY6M" frameborder="0" allowfullscreen></iframe>
-    </p>
+    <div class="row">
+        <div class="span8">
+            <h2>It's over. I won!</h2>
+            <p style="text-align: center;">
+                <iframe width="420" height="315" src="http://www.youtube.com/embed/3GwjfUFyY6M" frameborder="0" allowfullscreen></iframe>
+            </p>
+        </div>
+        <div class="span8">
+            <h2>Highlights</h2>
+            <p>
+                <ul>
+                    <li>250 miles in 2 months</li>
+                    <li>Ran every day in November</li>
+                    <li>Completed 3 half marathons</li>
+                    <li>Almost 40 hours of total running time</li>
+                    <li>Average Speed: 6.7 mph</li>
+                    <li>Average HR: 139 bpm</li>
+                    <li>Almost 30,000 Calories burned</li>
+                </ul>
+            </p>
+        </div>
+    </div>
 
     <h2>How it went down:<small>Blue=Me, Red=Cris</small></h2>
 
