@@ -52,11 +52,12 @@ $markup = <<<HTML
     </div>
 
 
-    <p>I have to run 250 miles before the end of 2011. Cris is aiming to cycle 800 miles. If only one of us achieves our goal, the loser has to pay for an all you can eat day for the winner and their family. There are also lesser sub goals to keep things interesting along the way.</p>
+    <p>I had to run 250 miles before the end of 2011. Cris was aiming to cycle 800 miles. If only one of us achieved our goal, the loser would have to pay for an all you can eat day for the winner and their family. There were also lesser sub goals to keep things interesting along the way.</p>
+    <p>We both finished way ahead of the deadline, but I crossed the finish line first, lining up a steak dinner at Cris' expense!</p>
 
     <div class="row">
         <div class="span8">
-            <h2>It's over. I won!</h2>
+            <h2>It's over!</h2>
             <p style="text-align: center;">
                 <iframe width="420" height="315" src="http://www.youtube.com/embed/3GwjfUFyY6M" frameborder="0" allowfullscreen></iframe>
             </p>
@@ -102,7 +103,7 @@ $markup = <<<HTML
   </section>
 
   <section>
-    <div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:comments href="bendalziel.com/competition.php" num_posts="5" width="940"></fb:comments>
+    <div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:comments href="bendalziel.com/competition.php" num_posts="2" width="940"></fb:comments>
 
   </section>
 HTML;

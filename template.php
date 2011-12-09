@@ -55,6 +55,18 @@ function render_page ($title, $page_title, $page_type, $page_content, $path = ''
 </head>
 <body>
 
+<div id="header">
+  <div id="header_container">
+    <ul>
+      <li class="first"><a href="http://www.linkedin.com/in/bendalziel" title="Ben Dalziel's professional profile on LinkedIn">profile</a></li>
+      <li><a href="http://www.flickr.com/photos/bendalziel/" title="Ben Dalziel's photography on Flickr">camera roll</a></li>
+      <li><a href="https://twitter.com/#!/bdalziel" title="Ben Dalziel on Twitter">@bdalziel</a></li>
+      <li><a href="https://github.com/bdalziel" title="Ben Dalziel on github">github</a></li>
+      <li><a href="http://runkeeper.com/user/tigerkitten/profile" title="Ben Dalziel on Runkeeper">runkeeper</a></li>
+    </ul>
+  </div>
+</div>
+
 {$nav}
 
 <div class="container">
@@ -65,13 +77,7 @@ function render_page ($title, $page_title, $page_type, $page_content, $path = ''
 
 <div id="footer">
   <div id="footer_container">
-    <ul>
-      <li class="first">&copy; <a href="index.php" alt="Ben Dalziel Home Page">Ben Dalziel</a> 2011</li>
-      <li><a href="http://www.linkedin.com/in/bendalziel" title="Ben Dalziel's professional profile on LinkedIn">Profile</a></li>
-      <li><a href="http://www.flickr.com/photos/bendalziel/" title="Ben Dalziel's photography on Flickr">Camera Roll</a></li>
-      <li><a href="https://twitter.com/#!/bdalziel" title="Ben Dalziel on Twitter">@bdalziel</a></li>
-      <li><a href="https://github.com/bdalziel" title="Ben Dalziel on github">github</a></li>
-    </ul>
+    <p><a href="index.php" alt="Ben Dalziel Home Page">Ben Dalziel</a> 2011</p>
   </div>
 </div>
 
@@ -93,14 +99,13 @@ function render_nav ($page_type) {
 <div id="nav">
 
   <section id="nav_container">
+    <div class="container_top"></div>
+    <div class="container_bottom"></div>
     <div class="container_back"></div>
     <div class="container_left"></div>
     <div class="container_right"></div>
-    <div class="container_bottom"></div>
-    <div class="container_top"></div>
     <div class="box box1 {$active_1}">
       <a href="index.php" title="Ben Dalziel's Home Page">
-        <figure class="back"></figure>
         <figure class="right"></figure>
         <figure class="left"></figure>
         <figure class="top"></figure>
@@ -110,7 +115,6 @@ function render_nav ($page_type) {
     </div>
     <div class="box box3 {$active_3}">
       <a href="blog.php" title="Ben Dalziel's Blog">
-        <figure class="back"></figure>
         <figure class="right"></figure>
         <figure class="left"></figure>
         <figure class="top"></figure>
@@ -120,7 +124,6 @@ function render_nav ($page_type) {
     </div>
     <div class="box box2 {$active_2}">
       <a href="resume.php" title="Ben Dalziel's R&#233;sum&#233;">
-        <figure class="back"></figure>
         <figure class="right"></figure>
         <figure class="left"></figure>
         <figure class="top"></figure>
@@ -128,7 +131,7 @@ function render_nav ($page_type) {
 	<figure class="front"><span>R&#233;sum&#233;</span></figure>
       </a>
     </div>
-    <div class="title">BenDalziel.com<a href="https://github.com/bdalziel/3D-CSS3-Transform-Nav" title="This CSS 3D nav area is available on github">*</a></div>
+    <!-- <div class="title">BenDalziel.com<a href="https://github.com/bdalziel/3D-CSS3-Transform-Nav" title="This CSS 3D nav area is available on github">*</a></div> -->
   </section>
 
 </div>

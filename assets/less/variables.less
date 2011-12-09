@@ -2,10 +2,30 @@
  * Variables to customize the look and feel of Bootstrap
  * ----------------------------------------------------- */
 
+@body-width: 960px;
+
+
+@primary-1: #00CC00;
+@primary-2: #269926;
+@primary-3: #008500;
+@primary-4: #39E639;
+@primary-5: #67E667;
+
+@secondary-a-1: #009999;
+@secondary-a-2: #1D7373;
+@secondary-a-3: #006363;
+@secondary-a-4: #33CCCC;
+@secondary-a-5: #5CCCCC;
+
+@secondary-b-1: #9FEE00;
+@secondary-b-2: #86B22D;
+@secondary-b-3: #679B00;
+@secondary-b-4: #B9F73E;
+@secondary-b-5: #C9F76F;
 
 // Links
-@linkColor:         #0069d6;
-@linkColorHover:    darken(@linkColor, 15);
+@linkColor:         @primary-2;
+@linkColorHover:    @primary-1;
 
 // Grays
 @black:             #000;
@@ -36,25 +56,3 @@
 @gridGutterWidth:   20px;
 @extraSpace:        (@gridGutterWidth * 2); // For our grid calculations
 @siteWidth:         (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
-
-// Color Scheme
-// Use this to roll your own color schemes if you like (unused by Bootstrap by default)
-@baseColor:         @blue;                  // Set a base color
-@complement:        spin(@baseColor, 180);  // Determine a complementary color
-@split1:            spin(@baseColor, 158);  // Split complements
-@split2:            spin(@baseColor, -158);
-@triad1:            spin(@baseColor, 135);  // Triads colors
-@triad2:            spin(@baseColor, -135);
-@tetra1:            spin(@baseColor, 90);   // Tetra colors
-@tetra2:            spin(@baseColor, -90);
-@analog1:           spin(@baseColor, 22);   // Analogs colors
-@analog2:           spin(@baseColor, -22);
-
-
-
-// More variables coming soon:
-// - @basefont to @baseFontSize
-// - @baseline to @baseLineHeight
-// - @baseFontFamily
-// - @primaryButtonColor
-// - anything else? File an issue on GitHub

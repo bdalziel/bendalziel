@@ -1,3 +1,9 @@
+/* Variables.less
+ * Variables to customize the look and feel of Bootstrap
+ * ----------------------------------------------------- */
+/* Mixins.less
+ * Snippets of reusable CSS to develop faster and keep code readable
+ * ----------------------------------------------------------------- */
 /*
 *, section p {
   font-size: 16px;
@@ -8,13 +14,13 @@ html body {
   background: url(../img/paper.jpg) repeat top left;
 }
 .container {
-  background-color: #FFF;
-  -moz-box-shadow: #999999 -2px px 9px;
-  -webkit-box-shadow: #999999 -2px 2px 9px;
-  box-shadow: #999999 -2px 2px 9px;
+  background-color: rgba(255, 255, 255, 0.7);
+  -webkit-box-shadow: #808080 -2px 2px 9px;
+  -moz-box-shadow: #808080 -2px 2px 9px;
+  box-shadow: #808080 -2px 2px 9px;
   padding-bottom: 80px;
-  padding-left: 18px;
-  padding-right: 18px;
+  padding: 0 10px;
+  padding-bottom: 60px;
 }
 div, section, figure {
   padding: 0;
@@ -24,14 +30,36 @@ div, section, figure {
   padding-top: 60px;
 }
 .shadow {
-  -moz-border-radius: 5px;
-  -o-border-radius: 5px;
   -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
   border-radius: 5px;
-  -moz-box-shadow: #999999 -2px px 9px;
-  -webkit-box-shadow: #999999 -2px 2px 9px;
-  box-shadow: #999999 -2px 2px 9px;
+  -webkit-box-shadow: #808080 -2px 2px 9px;
+  -moz-box-shadow: #808080 -2px 2px 9px;
+  box-shadow: #808080 -2px 2px 9px;
   overflow: hidden;
+}
+.me {
+  -webkit-box-shadow: 2px 2px 5px #808080;
+  -moz-box-shadow: 2px 2px 5px #808080;
+  box-shadow: 2px 2px 5px #808080;
+  margin-bottom: 60px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+.introduction {
+  background: url(../img/paper.jpg) repeat top left;
+  padding: 20px;
+  -webkit-box-shadow: 2px 2px 5px #808080;
+  -moz-box-shadow: 2px 2px 5px #808080;
+  box-shadow: 2px 2px 5px #808080;
+  height: 175px -40px;
+  min-height: 135px;
+}
+.introduction p {
+  font-size: 18px;
+  line-height: 22px;
+  text-shadow: 1px 1px 0px #bfbfbf;
 }
 .well blockquote {
   border-left: 5px solid #CCC;
@@ -43,51 +71,101 @@ div, section, figure {
   border: 5px solid #FFF;
   float: left;
   margin: 10px;
+  text-align: center;
   overflow: hidden;
   /* this is important */
 
 }
-section.photos p {
-  font-size: 13px;
-  line-height: 18px;
-}
 .photo, .oil-p {
   margin: -5px;
 }
-#footer {
-  background-color: #00af64;
-  -moz-box-shadow: #999999 -2px px 9px;
-  -webkit-box-shadow: #999999 -2px 2px 9px;
-  box-shadow: #999999 -2px 2px 9px;
+#header {
+  background-color: rgba(0, 133, 0, 0.6);
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(rgba(0, 204, 0, 0.6)), to(rgba(0, 133, 0, 0.6)));
+  background-image: -moz-linear-gradient(top, rgba(0, 204, 0, 0.6), rgba(0, 133, 0, 0.6));
+  background-image: -ms-linear-gradient(top, rgba(0, 204, 0, 0.6), rgba(0, 133, 0, 0.6));
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 204, 0, 0.6)), color-stop(100%, rgba(0, 133, 0, 0.6)));
+  background-image: -webkit-linear-gradient(top, rgba(0, 204, 0, 0.6), rgba(0, 133, 0, 0.6));
+  background-image: -o-linear-gradient(top, rgba(0, 204, 0, 0.6), rgba(0, 133, 0, 0.6));
+  background-image: linear-gradient(top, rgba(0, 204, 0, 0.6), rgba(0, 133, 0, 0.6));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgba(0, 204, 0, 0.6)', endColorstr='rgba(0, 133, 0, 0.6)', GradientType=0);
+  border-top: 5px solid #269926;
+  border-bottom: 1px solid #ffffff;
 }
-#footer_container {
-  background-color: #007241;
-  min-width: 940px;
-  width: 940px;
-  height: 60px;
+#header_container {
+  background-color: #269926;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#00cc00), to(#269926));
+  background-image: -moz-linear-gradient(top, #00cc00, #269926);
+  background-image: -ms-linear-gradient(top, #00cc00, #269926);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #00cc00), color-stop(100%, #269926));
+  background-image: -webkit-linear-gradient(top, #00cc00, #269926);
+  background-image: -o-linear-gradient(top, #00cc00, #269926);
+  background-image: linear-gradient(top, #00cc00, #269926);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00cc00', endColorstr='#269926', GradientType=0);
+  width: 960px;
+  height: 40px;
   margin: 0 auto;
 }
-#footer ul {
-  padding: 20px 0;
+#header_container ul {
+  padding: 0 10px;
+}
+#footer {
+  background-color: rgba(0, 133, 0, 0.6);
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(rgba(0, 204, 0, 0.6)), to(rgba(0, 133, 0, 0.6)));
+  background-image: -moz-linear-gradient(top, rgba(0, 204, 0, 0.6), rgba(0, 133, 0, 0.6));
+  background-image: -ms-linear-gradient(top, rgba(0, 204, 0, 0.6), rgba(0, 133, 0, 0.6));
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 204, 0, 0.6)), color-stop(100%, rgba(0, 133, 0, 0.6)));
+  background-image: -webkit-linear-gradient(top, rgba(0, 204, 0, 0.6), rgba(0, 133, 0, 0.6));
+  background-image: -o-linear-gradient(top, rgba(0, 204, 0, 0.6), rgba(0, 133, 0, 0.6));
+  background-image: linear-gradient(top, rgba(0, 204, 0, 0.6), rgba(0, 133, 0, 0.6));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgba(0, 204, 0, 0.6)', endColorstr='rgba(0, 133, 0, 0.6)', GradientType=0);
+  border-bottom: 5px solid #006363;
+  border-top: 1px solid #ffffff;
+}
+#footer_container {
+  background-color: #269926;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#00cc00), to(#269926));
+  background-image: -moz-linear-gradient(top, #00cc00, #269926);
+  background-image: -ms-linear-gradient(top, #00cc00, #269926);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #00cc00), color-stop(100%, #269926));
+  background-image: -webkit-linear-gradient(top, #00cc00, #269926);
+  background-image: -o-linear-gradient(top, #00cc00, #269926);
+  background-image: linear-gradient(top, #00cc00, #269926);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00cc00', endColorstr='#269926', GradientType=0);
+  width: 960px;
+  height: 40px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px 0;
+}
+#header, #footer {
+  color: #006363;
+}
+#header ul, #footer ul {
+  padding: 10px 0;
   margin: 0;
 }
-#footer li {
-  color: #FFF;
+#header li, #footer li {
   list-style: none;
-}
-#footer a {
-  color: #FFF;
-  margin-top: 10px;
-  padding: 10px 2px;
-}
-#footer li {
-  border-left: 1px solid #61d7a4;
+  border-left: 1px solid #9fee00;
   float: left;
   line-height: 1em;
   padding: 0 15px;
 }
-#footer li.first {
+#header li.first, #footer li.first {
   border-left: 0;
+}
+#header a, #footer a {
+  color: #c9f76f;
+  margin-top: 10px;
+  padding: 10px 2px;
+}
+#header a:hover, #footer a:hover {
+  color: #FFF;
 }
 #blog-container .posts {
   padding: 0;
@@ -103,8 +181,8 @@ section.photos p {
   list-style: none;
 }
 #blog-container .postsList li, #blog-container .postCard li {
-  border-top: 2px solid #218359;
-  border-right: 1px dotted #218359;
+  border-top: 2px solid #006363;
+  border-right: 1px dotted #006363;
 }
 #blog-container .postsList li h4,
 #blog-container .postCard li h4,
@@ -114,7 +192,7 @@ section.photos p {
   margin-top: -2px;
 }
 #blog-container .postsList li:hover, #blog-container .postCard li:hover {
-  background-color: #00af64;
+  background-color: rgba(0, 133, 0, 0.5);
 }
 #blog-container .postsList li a:hover, #blog-container .postCard li a:hover {
   text-decoration: none;
@@ -123,10 +201,16 @@ section.photos p {
 #blog-container .postCard li a:hover h4,
 #blog-container .postsList li a:hover h5,
 #blog-container .postCard li a:hover h5 {
-  color: #FFF;
+  color: #008500;
+}
+#blog-container .postsList li a:hover h4 small,
+#blog-container .postCard li a:hover h4 small,
+#blog-container .postsList li a:hover h5 small,
+#blog-container .postCard li a:hover h5 small {
+  color: #008500;
 }
 #blog-container .postsList li.active, #blog-container .postCard li.active {
-  border-left: 2px solid #218359;
+  border-left: 2px solid #269926;
   border-right: none;
 }
 #blog-container .postsList li.active:hover, #blog-container .postCard li.active:hover {

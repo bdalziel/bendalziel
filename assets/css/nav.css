@@ -1,43 +1,58 @@
+/* Variables.less
+ * Variables to customize the look and feel of Bootstrap
+ * ----------------------------------------------------- */
+/* Mixins.less
+ * Snippets of reusable CSS to develop faster and keep code readable
+ * ----------------------------------------------------------------- */
 #subNav {
   background-color: #A65F00;
   border: 1px solid #A65F00;
   padding: 3px;
 }
 #nav {
-  background-color: #00af64;
-  height: 160px;
-  -moz-box-shadow: #999999 -2px px 9px;
-  -webkit-box-shadow: #999999 -2px 2px 9px;
-  box-shadow: #999999 -2px 2px 9px;
+  background-color: rgba(0, 99, 99, 0.6);
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(rgba(0, 153, 153, 0.6)), to(rgba(0, 99, 99, 0.6)));
+  background-image: -moz-linear-gradient(top, rgba(0, 153, 153, 0.6), rgba(0, 99, 99, 0.6));
+  background-image: -ms-linear-gradient(top, rgba(0, 153, 153, 0.6), rgba(0, 99, 99, 0.6));
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 153, 153, 0.6)), color-stop(100%, rgba(0, 99, 99, 0.6)));
+  background-image: -webkit-linear-gradient(top, rgba(0, 153, 153, 0.6), rgba(0, 99, 99, 0.6));
+  background-image: -o-linear-gradient(top, rgba(0, 153, 153, 0.6), rgba(0, 99, 99, 0.6));
+  background-image: linear-gradient(top, rgba(0, 153, 153, 0.6), rgba(0, 99, 99, 0.6));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgba(0, 153, 153, 0.6)', endColorstr='rgba(0, 99, 99, 0.6)', GradientType=0);
+  height: 100px;
+  -webkit-box-shadow: -2px 2px 5px #808080;
+  -moz-box-shadow: -2px 2px 5px #808080;
+  box-shadow: -2px 2px 5px #808080;
 }
 #nav_container {
-  height: 100px;
+  height: 0;
   margin: 0 auto;
   position: relative;
-  width: 940px;
+  width: 960px;
   -webkit-perspective: 100;
 }
 div.title {
-  color: #ffc373;
+  color: #9fee00;
   display: block;
   font: bold 32px "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin-left: 10px;
   position: absolute;
-  top: 45px;
+  top: 10px;
   -webkit-transform: translatez(-100px);
 }
 .container_back {
-  background-color: #00af64;
-  height: 160px;
+  background-color: #009999;
+  height: 100px;
   width: 100%;
 }
 .container_right, .container_left {
-  background-color: #007241;
-  height: 160px;
+  background-color: #006363;
+  height: 100px;
   width: 100px;
 }
 .container_bottom, .container_top {
-  background-color: #FFF;
+  background-color: #1d7373;
   height: 100px;
   width: 100%;
 }
@@ -55,65 +70,64 @@ div.title {
   -webkit-transform: rotatey(-90deg) translatez(50px) translatex(-50px);
 }
 .container_bottom {
-  -moz-transform: rotatex(90deg) translatez(-110px) translatey(-50px);
-  -webkit-transform: rotatex(90deg) translatez(-110px) translatey(-50px);
+  -moz-transform: rotatex(90deg) translatez(-50px) translatey(-50px);
+  -webkit-transform: rotatex(90deg) translatez(-50px) translatey(-50px);
 }
 .container_top {
   -moz-transform: rotatex(90deg) translatez(50px) translatey(-50px);
   -webkit-transform: rotatex(90deg) translatez(50px) translatey(-50px);
 }
 .box1 {
-  left: 115px;
+  left: 120px;
 }
 .box2 {
-  left: 390px;
+  left: 400px;
 }
 .box3 {
-  left: 665px;
+  left: 680px;
 }
 .box figure {
   display: block;
-  opacity: 0.8;
   position: absolute;
   -mo-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
 }
 .box figure span {
-  color: #FFF;
+  color: #c9f76f;
+  text-shadow: 1px 1px 0 rgba(0, 99, 99, 0.9);
   display: block;
-  font: normal 30px Georgia, "Times New Roman", Times, serif;
-  font-style: italic;
-  padding: 10px 14px;
-  border: 2px solid #007241;
-  background-color: #00af64;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 30px;
+  padding: 3px 0 2px 0;
   text-align: center;
-  text-shadow: #007241 1px 1px 3px;
+}
+.box figure span:hover {
+  color: #FFF;
+  text-shadow: 2px 2px 0 rgba(0, 99, 99, 0.9);
 }
 .box a, .box a:hover {
   text-decoration: none;
 }
 .box .front, .box .back {
-  height: 60px;
+  background-color: #009999;
+  height: 40px;
   width: 160px;
 }
-.box .back {
-  background-color: #218359;
-}
 .box .right, .box .left {
-  background-color: #007241;
-  height: 60px;
+  background-color: #006363;
+  height: 40px;
   left: 55px;
   width: 50px;
 }
 .box .top, .box .bottom {
-  background-color: #218359;
+  background-color: #1d7373;
   height: 50px;
-  top: 5px;
+  top: -5px;
   width: 160px;
 }
 .box .front {
-  opacity: 1;
   -moz-transform: rotatey(0deg) translatez(25px);
   -webkit-transform: rotatey(0deg) translatez(25px);
 }
@@ -130,12 +144,12 @@ div.title {
   -webkit-transform: rotatey(-90deg) translatez(80px);
 }
 .box .top {
-  -moz-transform: rotatex(90deg) translatez(30px);
-  -webkit-transform: rotatex(90deg) translatez(30px);
+  -moz-transform: rotatex(90deg) translatez(20px);
+  -webkit-transform: rotatex(90deg) translatez(20px);
 }
 .box .bottom {
-  -moz-transform: rotatex(-90deg) translatez(30px);
-  -webkit-transform: rotatex(-90deg) translatez(30px);
+  -moz-transform: rotatex(-90deg) translatez(20px);
+  -webkit-transform: rotatex(-90deg) translatez(20px);
 }
 .box {
   -moz-transform: translatez(-75px);
@@ -146,6 +160,6 @@ div.title {
   -webkit-transform: translatez(-50px);
 }
 div.active, div.active:hover {
-  -moz-transform: translatez(-25px);
-  -webkit-transform: translatez(-25px);
+  -moz-transform: translatez(20px);
+  -webkit-transform: translatez(-30px);
 }

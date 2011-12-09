@@ -1,25 +1,12 @@
-@body-width: 940px;
-
-@shadow-color: #999;
-
-@scheme-primary: #00AF64;
-@scheme-dark:    #218359;
-@scheme-darkest: #007241;
-@scheme-pale:    #36D792;
-@scheme-palest:  #61D7A4;
-
-@scheme-accent-pale: #FFAD40;
-@scheme-accent-palest: #FFC373;
+@import "variables.less";
+@import "mixins.less";
 
 @3d-perspective: 100;
-
-@nav-height: 160px;
+@nav-height: 100px;
 @nav-depth: 100px;
 @nav-item-depth: @nav-depth / 2;
 @nav-item-width: 160px;
-@nav-item-height: 60px;
-
-
+@nav-item-height: 40px;
 
 #subNav {
   background-color: #A65F00;
@@ -28,43 +15,40 @@
 }
 
 #nav {
-  background-color: @scheme-primary;
+  #gradient.vertical(fadeout(@secondary-a-1, 40%), fadeout(@secondary-a-3, 40%));
   height: @nav-height;
-
-  -moz-box-shadow: @shadow-color -2px px 9px;
-  -webkit-box-shadow: @shadow-color -2px 2px 9px;
-  box-shadow: @shadow-color -2px 2px 9px;
+  .box-shadow(-2px 2px 5px @gray);
 }
 #nav_container {
-  height: 100px;
+  height: 0;
   margin: 0 auto;
   position: relative;
   width: @body-width;
   -webkit-perspective: @3d-perspective;
 }
 div.title {
-  color: @scheme-accent-palest;
+  color: @secondary-b-1;
   display: block;
   font: bold 32px "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin-left: 10px;
   position: absolute;
-  top: 45px;
+  top: 10px;
   -webkit-transform: translateZ( -@nav-depth );
 }
 .container_back {
-  background-color: @scheme-primary;
+  background-color: @secondary-a-1;
   height: @nav-height;
   width: 100%;
 }
 .container_right,
 .container_left {
-  background-color: @scheme-darkest;
+  background-color: @secondary-a-3;
   height: @nav-height;
   width:  @nav-depth;
 }
 .container_bottom,
 .container_top {
-  background-color: #FFF;
+  background-color: @secondary-a-2;
   height: 100px;
   width:  100%;
 }
@@ -83,8 +67,8 @@ div.title {
   -webkit-transform: rotateY( -90deg ) translateZ( 50px ) translateX( -50px );
 }
 .container_bottom   {
-  -moz-transform:    rotateX( 90deg ) translateZ( -110px ) translateY( -50px );
-  -webkit-transform: rotateX( 90deg ) translateZ( -110px ) translateY( -50px );
+  -moz-transform:    rotateX( 90deg ) translateZ( -50px ) translateY( -50px );
+  -webkit-transform: rotateX( 90deg ) translateZ( -50px ) translateY( -50px );
 }
 .container_top      {
   -moz-transform:    rotateX( 90deg ) translateZ( 50px ) translateY( -50px );
@@ -99,7 +83,6 @@ div.title {
 
 .box figure {
   display: block;
-  opacity: 0.8;
   position: absolute;
   -mo-transition:     all 0.3s ease-in-out;
   -o-transition:      all 0.3s ease-in-out;
@@ -107,19 +90,23 @@ div.title {
 }
 
 .box figure span {
-  color: #FFF;
+  color: @secondary-b-5;
+  text-shadow: 1px 1px 0 fadeout(@secondary-a-3, 10%);
   display: block;
-  font: normal 30px Georgia, "Times New Roman", Times, serif; //"Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-style: italic;
+  font-weight: normal;
+  font-size:  30px;
+  line-height:  30px;
+  //font-style: italic;
   //height: @nav-item-height;
   //margin: 0 auto;
   //margin:  5px 7px;
   //padding: 5px 7px;
-  padding: 10px 14px;
-  border: 2px solid @scheme-darkest;
-  background-color: @scheme-primary;
+  padding: 3px 0 2px 0;
   text-align: center;
-  text-shadow: @scheme-darkest 1px 1px 3px;
+  &:hover {
+      color: #FFF;
+      text-shadow: 2px 2px 0 fadeout(@secondary-a-3, 10%);
+  }
 }
 
 .box a, .box a:hover {
@@ -128,17 +115,14 @@ div.title {
 
 .box .front,
 .box .back   {
-  //background-color: @scheme-dark;
+  background-color: @secondary-a-1;
   height: @nav-item-height;
   width: @nav-item-width;
-}
-.box .back   {
-  background-color: @scheme-dark;
 }
 @nav-item-width-minus-depth: @nav-item-width - @nav-item-depth;
 .box .right,
 .box .left   {
-  background-color: @scheme-darkest;
+  background-color: @secondary-a-3;
   height: @nav-item-height;
   left: @nav-item-width-minus-depth / 2;
   width: @nav-item-depth;
@@ -147,13 +131,12 @@ div.title {
 @nav-item-height-minus-depth: @nav-item-height - @nav-item-depth;
 .box .top,
 .box .bottom {
-  background-color: @scheme-dark;
+  background-color: @secondary-a-2;
   height: @nav-item-depth;
   top: @nav-item-height-minus-depth / 2;
   width: @nav-item-width;
 }
 .box .front    { 
-  opacity: 1;
   -moz-transform:    rotateY(   0deg ) translateZ( @nav-item-depth / 2 );
   -webkit-transform: rotateY(   0deg ) translateZ( @nav-item-depth / 2 );
 }
@@ -188,6 +171,6 @@ div.title {
 }
 
 div.active, div.active:hover {
-  -moz-transform: translateZ( -@nav-item-depth / 2 );
-  -webkit-transform: translateZ( -@nav-item-depth / 2 );
+  -moz-transform: translateZ( @nav-item-depth / 2 - 5px );
+  -webkit-transform: translateZ( -@nav-item-depth / 2 - 5px );
 }
