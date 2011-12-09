@@ -108,7 +108,14 @@ div, section, figure {
   height: 40px;
   margin: 0 auto;
 }
+#header_container h1 {
+  float: left;
+  font-size: 18px;
+  line-height: 40px;
+  padding: 0 10px;
+}
 #header_container ul {
+  float: right;
   padding: 0 10px;
 }
 #footer {

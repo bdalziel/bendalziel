@@ -57,6 +57,7 @@ function render_page ($title, $page_title, $page_type, $page_content, $path = ''
 
 <div id="header">
   <div id="header_container">
+    <h1><a href="/index.php" alt="Return to Ben Dalziel's homepage" title="Return to Ben Dalziel's homepage">BenDalziel.com</a></h1>
     <ul>
       <li class="first"><a href="http://www.linkedin.com/in/bendalziel" title="Ben Dalziel's professional profile on LinkedIn">profile</a></li>
       <li><a href="http://www.flickr.com/photos/bendalziel/" title="Ben Dalziel's photography on Flickr">camera roll</a></li>
