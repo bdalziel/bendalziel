@@ -1,0 +1,12 @@
+/*!
+ * Site.less
+ */
+@import "bootstrap/variables.less"; // Modify this for custom colors, font-sizes, etc
+@import "bootstrap/mixins.less";
+
+.sidebar {
+    min-height: 400px;
+    background: url(../img/paper.jpg) repeat top left;
+    padding: 20px;
+    .box-shadow(1px 1px 1px fadeout(@black, 20%));
+}

@@ -1,0 +1,40 @@
+/*!
+ * Site.less
+ */
+@import "bootstrap/variables.less"; // Modify this for custom colors, font-sizes, etc
+@import "bootstrap/mixins.less";
+
+.container {
+    margin-top: 64px;
+}
+
+.sidebar {
+    text-align: center;
+    background-color: fadeout(@black, 98%);
+    padding: 42px 16px;
+    .box-shadow(0 1px 3px fadeout(@accentColor, 90%));
+    .border-radius(2px);
+
+    h1 {
+        text-shadow: 0 1px 0 fadeout(@white, 0%);
+    }
+}
+
+.primary {
+    border-left: 1px dotted @accentColor;
+    padding-left: 36px;
+    margin-top: 128px + 64px;
+    margin-bottom: 64px;
+    p {
+        line-height: 28px;
+    }
+}
+
+.footer {
+    //.box-shadow(0 1px 3px fadeout(@accentColor, 90%));
+    //.border-radius(2px);
+    padding: 42px 16px;
+    text-align: center;
+    color: #999999;
+    font-size: 13px;
+}
